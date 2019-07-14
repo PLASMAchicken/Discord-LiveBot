@@ -1,4 +1,4 @@
-**Originally Developed By PlayBy, Modified by Endless Hosting**
+**Originally Developed By PlayBy, Modified by Endless Hosting and B3CKDOOR and myself PLASMA_chicken**
 
 # Don't use Livebot with User accounts, as it is bannable. Bots should still be ok!
 
