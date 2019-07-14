@@ -3,18 +3,19 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <script src="js/app.js" charset="utf-8"></script>
+    <script src="js/app.js"></script>
     <link rel="stylesheet" href="css/master.css">
   </head>
+
   <body onload='create()'>
     <div id='electron-titlebar'>
       <p id='titleBar-name'><img src="images/livebotlogoadv.png" height=15></p>
       <div class='drag'></div>
-
     </div>
+
     <div id='main'>
       <div id='guild-list'>
-        <p><center style="margin-top: -18px;"><span style="margin-top: -10px; color: #C13281; font-family: Tahoma, Geneva, sans-serif; font-size: 0.6em;">LiveBot </span><br><span id="versionstr" style="margin-top: 0px; color: white; font-family: Tahoma, Geneva, sans-serif; font-size: 0.6em;"></span><hr style="border-color: #a0a0a0; font-family: Tahoma, Geneva, sans-serif; color: white; font-size: 0.6em;"></center></p>
+        <p> <center style="margin-top: -18px;"><span style="margin-top: -10px; color: #C13281; font-family: Tahoma, Geneva, sans-serif; font-size: 0.6em;">LiveBot </span><br><span id="versionstr" style="margin-top: 0px; color: white; font-family: Tahoma, Geneva, sans-serif; font-size: 0.6em;"></span><hr style="border-color: #a0a0a0; font-family: Tahoma, Geneva, sans-serif; color: white; font-size: 0.6em;"></center></p>
         <div id='guildIndicator'></div>
       </div>
 
@@ -52,7 +53,7 @@
         <div id='message-list'></div>
 
         <div id='sendmsg'>
-          <input type="text" name="message" value="" placeholder='Message' id='msgbox'  ontype='typing()'/>
+          <input type="text" name="message" value="" placeholder='Message' id='msgbox'/>
           <button type="button" name="button" onclick='sendmsg()' id='sendbtn'>Send</button>
         </div>
       </div>
@@ -81,8 +82,15 @@
           <option value="invisible">Offline</option>
           <option value="dnd">Do Not Disturb</option>
           <option value="idle">Idle</option>
+		  <option value="streaming">Streaming (set game first)</option>
         </select>
         <input type='button' name='invite' value='Set Status' id='statusBtn' class='optionBox' onclick="setStatus()"/>
+        <br>
+        <hr style="border-color: #676767;">
+        <br>
+        <!--<p id="optionText">Show hidden channels?</p>
+        <input type='checkbox' name='invite' id='showhiddenChkBx' checked=true class='optionBox'/>
+        -->
       <img id="spinningKiwi" style="visibility: hidden;" class="center" src="images/kiwimascot.png">
       <img id="nochannel" src="images/kiwinotfound.png" class="center">
       </div>

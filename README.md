@@ -1,5 +1,7 @@
 **Originally Developed By PlayBy, Modified by Endless Hosting**
 
+# Don't use Livebot with User accounts, as it is bannable. Bots should still be ok!
+
 ### NOTE: Some of the assets in this project belong to Discord Inc, and anyone else it belongs to.
 
 # Discord-LiveBot
@@ -7,7 +9,7 @@ Discord-LiveBot allows you to take control of your Discord bot using a client-li
 
 At the moment, LiveBot is still in alpha stage. To run it, open a terminal window in the main directory, then type `npm test`.
 
-<img src='https://i-banned.dj-electro.me/1032299.png' style='border-radius: 10px;'/>
+<img src='https://succ.world/i/ubhlmykc.png' style='border-radius: 10px;'/>
 
 ## What is this?
 LiveBot is a program built with electron and discord.js, that will allow you to have discord controlling a bot. You are able to view messages in channels, send messages, interact with people, and see what is going on in the servers your bot is in. LiveBot will also work with a user account as well, so you are not just limited to bots.
@@ -15,11 +17,15 @@ LiveBot is a program built with electron and discord.js, that will allow you to 
 LiveBot had been built to copy discord, and while it is not exact, it is pretty close. More additions will come soon, so just be patient, but feel free to recommend any addition, just create an issue!
 
 ## Screenshots
-<img src='https://i-banned.dj-electro.me/482109.png' style='border-radius: 10px;'>
+<img src='https://succ.world/i/hpar21m6.png' style='border-radius: 10px;'>
 
 
 ## How to install
-To install livebot, just download as a zip file, which you can do by pressing the green button above. Once you have downloaded and extracted the zip file, go into the directory with a command prompt or shell window. In the shell window, enter the commands `npm install`. Make sure that the terminal window is running as administrator. If this does not work, then just run `npm install electron`. Then to start it, run `npm test`.
+1. Clone this Repo
+2. run `cd Discord-LiveBot && npm i`
+3.  to test it run `npm test`
+
+If it doesn't work, install electron using `npm i electron`
 
 ## Current features.
 
@@ -41,7 +47,7 @@ This box is how you log into a profile. To log into a token by default, put it i
 
 ### Akira!
 Akira is the livebot version of Discord's Clyde. Except Akira works like an actual Bot! Just use the prefix `/`. Only you can see what Akira says, so don't worry about interfering with any conversations. <br>
-<img src='https://i-banned.dj-electro.me/233641.png' style='border-radius: 10px;'>
+<img src='https://succ.world/i/21xpc1n8.png' style='border-radius: 10px;'>
 
 ### Profile card.
 The profile card is able to tell you the username, the avatar image, the discriminator, and something discord does not have. The profile card will tell you if the account you are signed into is a bot or a user. This can be handy if you are not quite sure. <br>

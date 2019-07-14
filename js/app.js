@@ -322,7 +322,7 @@ function guildSelect(g, img) {
    });
    textPlaced = true;
    voicePlaced = true;
-    if (c.type === null) {
+    if (c.type === 'category') {
 
       // Categories
       let div = document.createElement('div');
@@ -395,6 +395,11 @@ function guildSelect(g, img) {
 }
 
 function channelSelect(c, name) {
+
+  if(c.type == "voice"){
+    alert("Voice Channels are NOT supported at this time!");
+    return;
+  }
   document.getElementById('spinningKiwi').style.visibility = 'visible';
   let messages = document.getElementById("message-list");
   while (messages.firstChild) {
@@ -519,7 +524,7 @@ function command(text) {
   let name = document.createElement('p');
   let username;
 
-  username = document.createTextNode('Barry');
+  username = document.createTextNode('Akira');
   name.appendChild(username);
   name.id = 'messageUsername';
   name.style.color = `#999999`;
@@ -660,7 +665,7 @@ function savetoken() {
 }
 
 function typing() {
-
+    
 }
 
 function changeUname() {
@@ -678,8 +683,26 @@ function urlify(text) {
 }
 
 function setStatus() {
-  options('status', document.getElementById('statusBox').value)
-}
+	if (document.getElementById('statusBox').value == "streaming") {
+		bot.user.setPresence({
+			game: {
+				name: function() {
+					if (bot.user.presence.game == null) {
+						return "something";
+					} else {
+						return bot.user.presence.game.name;
+					}
+				}(),
+				type: "STREAMING",
+				url: "https://www.twitch.tv/discordapp"
+			}
+		});
+		} else {
+			options('status', document.getElementById('statusBox').value);
+			remote.getGlobal('BWReport')().setOverlayIcon('images/statuses/' + document.getElementById('statusBox').value + '.png', document.getElementById('statusBox').value);
+		};
+	}
+
 
 function setGame() {
   options('game', document.getElementById('gameBox').value)

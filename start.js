@@ -3,16 +3,26 @@ const {app, BrowserWindow} = electron;
 const path = require('path');
 const url = require('url');
 const pack = require('./package.json');
+const os = require('os')
+
+let UserOS = os.platform()
+if(UserOS === 'darwin'){
+  frame = true
+} else if (UserOS === 'win32'){
+  frame = false
+} else {
+  frame = false
+}
 
 let win;
-
 function createWindow() {
-  win = new BrowserWindow({width: 1200, height: 650, frame: false, icon: path.join(__dirname, 'images/kiwimascoticnborders.png')});
-  win.setOverlayIcon('images/statuses/offline.png', 'Offline');
+  win = new BrowserWindow({width: 1200, height: 650, frame: frame, icon: path.join(__dirname, 'images/kiwimascoticnborders.png')});
+ // win.webContents.openDevTools();
   win.loadURL(url.format({
     pathname: path.join(__dirname, 'index.html'),
     protocol: 'file:',
     slashes: true
+
   }));
   win.on('closed', () => {
     win = null
