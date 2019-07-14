@@ -16,8 +16,15 @@ if(UserOS === 'darwin'){
 
 let win;
 function createWindow() {
-  win = new BrowserWindow({width: 1200, height: 650, frame: frame, icon: path.join(__dirname, 'images/kiwimascoticnborders.png')});
- // win.webContents.openDevTools();
+  win  = new BrowserWindow({
+width:1200,
+height:650,
+frame: frame,
+webPreferences: {
+nodeIntegration:true
+},
+icon: path.join(__dirname, 'images/kiwimascoticnborders.png')
+});
   win.loadURL(url.format({
     pathname: path.join(__dirname, 'index.html'),
     protocol: 'file:',
